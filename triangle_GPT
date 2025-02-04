@@ -86,11 +86,11 @@ class HappyMove(Node):
         self.move_time(duration, linear_speed, angular_speed)
 
     def triangle(self, dist, angle):
-        for _ in range(3):
-            while not self.rotate_angle(angle):
+            while not self.rotate_angle(angle): #指定角回転
                 rclpy.spin_once(self)
             self.yaw0 = self.yaw
-            while not self.move_distance(dist):
+       for _ in range(3):
+            while not self.move_distance(dist): #指定距離直線
                 rclpy.spin_once(self)
             while not self.rotate_angle(2 * math.pi / 3):  # 120度の回転
                 rclpy.spin_once(self)
