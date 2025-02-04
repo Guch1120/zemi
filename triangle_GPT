@@ -94,11 +94,11 @@ class HappyMove(Node):
             self.yaw0 = self.yaw
             while not self.move_distance(dist):
                 rclpy.spin_once(self)
-            while not self.rotate_angle(angle):
-                rclpy.spin_once(2*math.pi/3)
+            while not self.rotate_angle(2 * math.pi / 3):  # 120度の回転
+                rclpy.spin_once(self)
             self.yaw0 = self.yaw
             self.x0, self.y0 = self.x, self.y
-            
+
     def timer_callback(self):
         self.pub.publish(self.vel)
 
