@@ -39,7 +39,20 @@ class HappyMove(Node):
     def move_distance(self, dist):
         error = 0.05
         diff = dist - math.sqrt((self.x - self.x0) ** 2 + (self.y - self.y0) ** 2)
-        if abs(diff) > error:
+
+        t1 = 1 * dist/4
+        t2 = 2 * dist/4
+        t3 = 3 * dist/4
+        t4 = 4 * dist/4
+
+        if self.x<t1:self.set_vel(,0.0)
+        if self.x<t2:self.set_vel(,0.0)
+        if self.x<t3:self.set_vel(,0.0)
+        if self.x<t4:self.set_vel(,0.0)
+        
+        
+        #ここで区分分けして加減速を実装したい
+        if abs(diff) > error: #許容差
             self.set_vel(0.25, 0.0)
             return False
         else:
