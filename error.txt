@@ -1,0 +1,3 @@
+module setuptools
+Extensions to the 'distutils' for large or complex distributions
+This file could potentially override an existing Python package and interfere with kernel execution, consider renaming it.JupyterLearn more
