@@ -1,3 +1,15 @@
 module setuptools
 Extensions to the 'distutils' for large or complex distributions
 This file could potentially override an existing Python package and interfere with kernel execution, consider renaming it.JupyterLearn more
+
+
+
+  File "/home/ubuntu/tkg/tkg_buckup0204/src/teleop/install/teleop/lib/python3.8/site-packages/teleop/happy_move_ymgc2.py", line 160, in accelerate_triangle
+    while not self.accelerate_angle(angle): #指定角回転
+  File "/home/ubuntu/tkg/tkg_buckup0204/src/teleop/install/teleop/lib/python3.8/site-packages/teleop/happy_move_ymgc2.py", line 87, in accelerate_angle
+    self.set_vel(0.0, w)
+  File "/home/ubuntu/tkg/tkg_buckup0204/src/teleop/install/teleop/lib/python3.8/site-packages/teleop/happy_move_ymgc2.py", line 36, in set_vel
+    self.vel.angular.z = angular
+  File "/opt/ros/foxy/lib/python3.8/site-packages/geometry_msgs/msg/_vector3.py", line 157, in z
+    assert \
+AssertionError: The 'z' field must be of type 'float'
